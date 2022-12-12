@@ -1,0 +1,11 @@
+body {
+  font-family: 'Gilroy', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  max-width: $vp1200;
+  margin: 0 auto;
+  padding: 0 40px;
+}

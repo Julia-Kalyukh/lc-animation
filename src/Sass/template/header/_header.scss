@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px 0;
+  margin-bottom: 6px;
+}
+
+.header__lk,
+.header__lk_user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header__lk_user {
+
+  &-name {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 106%;
+    color: $color-DimGray;
+    margin: 0 6px 0 11px;
+  }
+
+  &-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+  }
+}
