@@ -1,0 +1,105 @@
+// .footer {
+//   flex: 0 0 auto;
+// }
+
+.footer-bg {
+  width: 100vw;
+
+  &--RoyalBlue {
+    background-color: $color-RoyalBlue;
+  }
+
+  &--SlateBlue {
+    background-color: $color-SlateBlue;
+  }
+}
+
+.footer-main {
+  padding: 44px 40px 39px 44px;
+}
+
+.footer-second {
+  padding: 39px 40px 32px 40px;
+}
+
+.footer-hr {
+  margin: 0;
+  border-bottom: none;
+  background-color: $color-White;
+  opacity: 0.1;
+}
+
+.footer-text {
+  font-family: $font-Gilroy;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: $color-White;
+
+  &--details,
+  &--privacy {
+    font-weight: 400;
+  }
+
+  &--privacy {
+    color: $color-Silver;
+
+    &:hover {
+      color: $color-Gainsboro;
+      transition: 0.3s ease-in-out;
+    }
+  }
+}
+
+.footer-main__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+
+  .social-media__icon {
+    width: 29.54px;
+    height: 29.54px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $color-White;
+
+    &:not(:last-child) {
+      margin-right: 19.16px;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+      transition: 0.3s ease-in-out;
+    }
+
+    svg {
+      fill: $color-RoyalBlue;
+    }
+  }
+}
+
+.menu-footer {
+  width: 100%;
+  padding-left: 0;
+  margin: 45px 0 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  list-style-type: none;
+
+  a:hover {
+    text-shadow: 1px 3px 2px rgba(214, 214, 255, 0.2),
+      0px -1px 6px rgba(165, 166, 246, 0.3);
+  }
+}

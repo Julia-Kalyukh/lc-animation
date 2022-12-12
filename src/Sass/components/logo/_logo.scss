@@ -1,12 +1,9 @@
 .logo {
-  padding: 3px 0;
-
   &--royalBlue {
     svg {
       fill: $color-RoyalBlue;
     }
-  }
-
+        }
   &--white {
     svg {
       fill: $color-White;
