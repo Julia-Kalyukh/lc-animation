@@ -1,4 +1,48 @@
 @@include('src/html/template/head.html')
 @@include('src/html/template/header.html')
 
+<div class="container">
+
+  <div class="lk">
+    @@include('src/html/components/navigation-lk.html')
+
+    <main class="lk-control">
+      <h1 class="invisible">Страница управления специалиста</h1>
+      <section class="profile-info">
+        <h2 class="invisible">Данные профиля</h2>
+
+        <div class="profile-info__header">
+          <div class="profile-info__header_user f-row f-align-center">
+            <img class="profile-info__header_avatar" src="/img/images/avatar.png" alt="avatar">
+            <span class="profile-info__header_name">Давид Аракелян</span>
+          </div>
+
+          <span class="profile-info__status profile-info__status--top"></span>
+        </div>
+
+        <div class="profile-info__sr">
+          <div class="profile-info__sr_header f-row">
+            <h2>SELFMADE RESPECT (SR)</h2>
+
+            <span class="tooltip" id="js-tooltip-what" aria-describedby="tooltip">(Что это?)</span>
+            <div id="popper-tooltip" role="tooltip">
+              <div id="popper-arrow" data-popper-arrow></div>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum commodi accusamus assumenda. Ipsa,
+              voluptate. Maxime ipsa esse quasi ut, itaque quo cum alias! Magnam autem delectus ipsa velit officiis?
+              Nam.
+            </div>
+          </div>
+          <div class="profile-info__variables">
+            <div class="profile-info__variables_item">
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+</div>
+
 @@include('src/html/template/footer.html')

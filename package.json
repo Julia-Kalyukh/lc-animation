@@ -18,9 +18,12 @@
   "devDependencies": {
     "@babel/core": "^7.19.6",
     "@babel/preset-env": "^7.19.4",
+    "babel-core": "^6.26.3",
     "browser-sync": "^2.27.10",
+    "core-js": "^3.26.0",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
+    "del": "^6.1.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
@@ -43,17 +46,17 @@
     "gulp-svgstore": "^9.0.0",
     "gulp-uglify": "^3.0.2",
     "node-sass": "^7.0.3",
-    "sass": "^1.55.0",
-    "svgxuse": "^1.2.6",
-    "webpack": "^5.74.0",
-    "webpack-dev-server": "^4.11.1",
-    "webpack-stream": "^7.0.0",
-    "babel-core": "^6.26.3",
-    "core-js": "^3.26.0",
-    "del": "^6.1.1",
     "normalize.css": "^8.0.1",
     "path": "^0.12.7",
     "postcss-less": "^6.0.0",
-    "uglify-js": "^3.17.4"
+    "sass": "^1.55.0",
+    "svgxuse": "^1.2.6",
+    "uglify-js": "^3.17.4",
+    "webpack": "^5.74.0",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6"
   }
 }

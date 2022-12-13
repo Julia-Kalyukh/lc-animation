@@ -1,0 +1,81 @@
+.profile-info {
+  width: 100%;
+  max-width: 646px;
+
+  background: $color-WhiteSmoke;
+  border-radius: 15px;
+}
+
+.profile-info__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 28px 19px 21px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  .profile-info__header_avatar {
+    width: 71px;
+    height: 71px;
+    margin-right: 22px;
+    border-radius: 100%;
+  }
+
+  .profile-info__header_name {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 106%;
+    color: $color-DimGray;
+  }
+
+  .profile-info__status {
+    display: inline-block;
+    height: fit-content;
+    padding: 0 7.63px;
+
+    &::before {
+      font-weight: 700;
+      font-size: 9.92957px;
+      line-height: 20px;
+    }
+
+    &--top {
+      background-color: $color-HotPink;
+      border-radius: 46.669px;
+
+      &::before {
+        content: 'ТОП';
+        color: $color-White;
+      }
+    }
+  }
+}
+
+.profile-info__sr {
+  padding: 29px 26px 30px 21px;
+
+  .profile-info__sr_header {
+    align-items: flex-end;
+  }
+
+  h2 {
+    margin: 0;
+    margin-right: 6px;
+
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 19px;
+
+    color: $color-DimGray;
+    text-transform: uppercase;
+  }
+
+  .tooltip {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+
+    cursor: pointer;
+    color: $color-HotPink;
+  }
+}

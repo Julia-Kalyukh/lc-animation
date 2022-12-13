@@ -1,0 +1,88 @@
+// Навигация в ЛК
+.navigation-lk {
+  width: 100%;
+  max-width: 234px;
+  padding: 16px 0 23px;
+  margin-right: 30px;
+  background-color: $color-WhiteSmoke;
+  border-radius: 15px;
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: $color-DimGray;
+    text-decoration: none;
+  }
+
+  .svg-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    width: 23px;
+    margin-right: 10px;
+  }
+
+  .navigation-lk__item {
+    transition: $animate;
+
+    .fill {
+      fill: $color-DimGray;
+    }
+
+    .stroke {
+      stroke: $color-DimGray;
+    }
+
+    &:hover {
+      a {
+        color: $color-RoyalBlue;
+      }
+
+      .fill {
+        fill: $color-RoyalBlue;
+      }
+
+      .stroke {
+        stroke: $color-RoyalBlue;
+      }
+    }
+
+    &--main {
+      margin: 0 18px;
+      padding: 20px 14px 20px 39px;
+    }
+
+    &--main.active,
+    &--main:hover.active {
+      background: $color-White;
+      border-radius: 15px;
+
+      a {
+        color: $color-HotPink;
+      }
+
+      .fill {
+        fill: $color-HotPink;
+      }
+
+      .stroke {
+        stroke: $color-HotPink;
+      }
+    }
+
+    &--exit {
+      margin-top: 17px;
+      padding: 21px 14px 0 56px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+}

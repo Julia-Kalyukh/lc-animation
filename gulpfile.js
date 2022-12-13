@@ -4,14 +4,14 @@ const sass = require('gulp-sass')(require('sass'));
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
-const htmlmin = require('gulp-htmlmin');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const fileinclude = require('gulp-file-include');
 const babel = require('gulp-babel');
 const svgStore = require('gulp-svgstore');
-const replace = require('gulp-replace');
 const del = require('del');
+
+const { STYLE_LIBS, JS_LIBS } = require('./gulp.config');
 
 gulp.task('server', function () {
   server.init({
@@ -59,6 +59,14 @@ gulp.task('styles-main', function () {
     .pipe(server.stream());
 });
 
+gulp.task('styles-vendor', function () {
+  return gulp.src([...STYLE_LIBS])
+    .pipe(cleanCSS({ compatibility: '*' }))
+    .pipe(concat("vendor.min.css"))
+    .pipe(gulp.dest("dist/css"))
+    .pipe(server.stream());
+});
+
 gulp.task('html', function () {
   return gulp.src(["src/html/*.html", "src/html/pages/**/*.html"])
     .pipe(fileinclude({
@@ -87,6 +95,13 @@ gulp.task('scripts-main', function () {
     // .pipe(gulp.dest('dist/js'))
     .pipe(uglify())
     .pipe(concat('main.min.js'))
+    .pipe(gulp.dest("dist/js"));
+});
+
+gulp.task('scripts-vendor', function () {
+  return gulp.src([...JS_LIBS])
+    .pipe(uglify())
+    .pipe(concat('vendor.min.js'))
     .pipe(gulp.dest("dist/js"));
 });
 
@@ -121,7 +136,9 @@ gulp.task('default',
   gulp.series(
     'clean',
     'styles-main',
+    'styles-vendor',
     'scripts-main',
+    'scripts-vendor',
     'sprite',
     'copy',
     'html',
@@ -132,7 +149,9 @@ gulp.task('default',
 gulp.task('build',
   gulp.series(
     'styles-main',
+    'styles-vendor',
     'scripts-main',
+    'scripts-vendor',
     'sprite',
     'copy',
     'html',
