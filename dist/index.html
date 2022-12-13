@@ -135,6 +135,7 @@
 
     <main class="lk-control">
       <h1 class="invisible">Страница управления специалиста</h1>
+
       <section class="profile-info">
         <h2 class="invisible">Данные профиля</h2>
 
@@ -151,7 +152,7 @@
           <div class="profile-info__sr_header f-row">
             <h2>SELFMADE RESPECT (SR)</h2>
 
-            <span class="tooltip" id="js-tooltip-what" aria-describedby="tooltip">(Что это?)</span>
+            <span class="tooltip-what" id="js-tooltip-what" aria-describedby="tooltip">(Что это?)</span>
             <div id="popper-tooltip" role="tooltip">
               <div id="popper-arrow" data-popper-arrow></div>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum commodi accusamus assumenda. Ipsa,
@@ -159,12 +160,44 @@
               Nam.
             </div>
           </div>
-          <div class="profile-info__variables">
+          <div class="profile-info__variables f-row">
             <div class="profile-info__variables_item">
-
+              <span class="profile-info__variables_data profile-info__variables_data--profile">Профиль</span>
+            </div>
+            <div class="profile-info__variables_item">
+              <span class="profile-info__variables_data profile-info__variables_data--portfolio">Портфолио</span>
+            </div>
+            <div class="profile-info__variables_item">
+              <span class="profile-info__variables_data profile-info__variables_data--fresh">SR ФРЕШ</span>
+            </div>
+            <div class="profile-info__variables_item">
+              <span class="profile-info__variables_data profile-info__variables_data--pro">SR ПРО</span>
+            </div>
+            <div class="profile-info__variables_item">
+              <span class="profile-info__variables_data profile-info__variables_data--top">SR ТОП</span>
             </div>
           </div>
         </div>
+
+        <div class="profile-info__disk">
+          <h3>Мой диск</h3>
+          <div class="profile-info__disk_memory f-row f-align-center">
+            <div>
+              <span class="profile-info__disk_stay">Осталось</span>
+              <span class="profile-info__disk_data">40/100 (mb)</span>
+            </div>
+            <div class="profile-info__disk_progress">
+              <progress value="40" max="100"></progress>
+              <span class="profile-info__disk_progress-btn">Добавить место</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="your-sr">
+        <h2>Ваш SR</h2>
+
 
       </section>
 

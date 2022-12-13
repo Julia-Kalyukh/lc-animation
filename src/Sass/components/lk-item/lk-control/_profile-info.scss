@@ -1,11 +1,13 @@
 .profile-info {
   width: 100%;
   max-width: 646px;
+  height: fit-content;
 
   background: $color-WhiteSmoke;
   border-radius: 15px;
 }
 
+// Шапка
 .profile-info__header {
   display: flex;
   justify-content: space-between;
@@ -51,31 +53,164 @@
   }
 }
 
+// SELFMADE RESPECT (SR)
 .profile-info__sr {
   padding: 29px 26px 30px 21px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
   .profile-info__sr_header {
     align-items: flex-end;
+
+    h2 {
+      margin: 0;
+      margin-right: 6px;
+      font-weight: 600;
+      font-size: 19px;
+      line-height: 19px;
+      color: $color-DimGray;
+      text-transform: uppercase;
+    }
+
+    .tooltip-what {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 12px;
+      cursor: pointer;
+      color: $color-HotPink;
+    }
   }
 
-  h2 {
-    margin: 0;
-    margin-right: 6px;
+  .profile-info__variables {
+    padding: 10px 0 30px;
+    .profile-info__variables_item {
+      width: 115px;
+      height: 66px;
 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: $color-White;
+      border-radius: 15px;
+
+      &:not(:last-child) {
+        margin-right: 6px;
+      }
+    }
+
+    .profile-info__variables_data {
+      position: relative;
+
+      display: inline-block;
+      padding-left: 31px;
+
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 15px;
+      color: $color-Grey;
+
+      &::before {
+        content: '';
+
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        display: block;
+        width: 22px;
+        height: 22px;
+        border-radius: 63px;
+      }
+
+      &--profile {
+        &::before {
+          background: $color-LightSteelBlue;
+        }
+      }
+      &--portfolio {
+        &::before {
+          background: $color-Orchid;
+        }
+      }
+      &--fresh {
+        &::before {
+          background: $color-LightSeaGreen;
+        }
+      }
+      &--pro {
+        &::before {
+          background: $color-RoyalBlue;
+        }
+      }
+      &--top {
+        &::before {
+          background: $color-HotPink;
+        }
+      }
+    }
+  }
+}
+
+// Мой диск
+.profile-info__disk {
+  padding: 22px 34px 31px 21px;
+
+  h3 {
+    margin: 0 0 13px;
     font-weight: 600;
     font-size: 19px;
-    line-height: 19px;
-
+    line-height: 23px;
     color: $color-DimGray;
-    text-transform: uppercase;
+  }
+}
+.profile-info__disk_stay {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: $color-Grey;
+  margin-right: 9px;
+}
+
+.profile-info__disk_data {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: $color-DimGray;
+}
+
+// Прогресс
+.profile-info__disk_progress {
+  position: relative;
+
+  .profile-info__disk_progress-btn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    color: $color-RoyalBlue;
+    cursor: pointer;
   }
 
-  .tooltip {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 12px;
-
-    cursor: pointer;
-    color: $color-HotPink;
+  progress {
+    display: block;
+    width: 398px;
+    height: 15px;
+    margin-left: 15px;
+    border-radius: 63px;
+  }
+  progress::-webkit-progress-bar {
+    background-color: $color-Lavender;
+    border-radius: 63px;
+  }
+  progress::-webkit-progress-value {
+    background-color: $color-RoyalBlue;
+    border-radius: 63px;
+  }
+  progress::-moz-progress-bar {
+    background-color: $color-RoyalBlue;
+    border-radius: 63px;
   }
 }
