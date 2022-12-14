@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     progressSR.animate([
       { strokeDashoffset: 100 },
-      { strokeDashoffset: strokeDashOffsetValue}], {
+      { strokeDashoffset: strokeDashOffsetValue }], {
       duration: 1500,
       iterations: 1,
       cubicBezier: '0.65, 0.05, 0.36, 1'
@@ -20,4 +20,35 @@ document.addEventListener('DOMContentLoaded', () => {
   addProgressSR('.js-sr-progress--fresh', 75);
   addProgressSR('.js-sr-progress--portfolio', 30);
   addProgressSR('.js-sr-progress--profile', 50);
+
+  function onProgressMemory() {
+    let p = document.querySelector('progress'); 
+// здесь val - это наше новое значение value
+    p.setAttribute('value', 40); 
+    // p.style.setProperty('width', 40 + '%');
+  }
+
+  onProgressMemory();
+
+  function outNum(num, elem) {
+
+    const time = 2000;
+    const step = 1;
+
+    let e = document.querySelector(elem);
+    let n = 0;
+    let t = Math.round(time/(num/step));
+    let interval = setInterval(() => {
+        n = n + step;
+        if(n == num) {
+              clearInterval(interval);
+         }
+    e.innerHTML = n;
+    },
+t);
+  };
+  
+  outNum(40, '.count');
+
+
 });
