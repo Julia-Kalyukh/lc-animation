@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: $font-Gilroy;
 }
@@ -9,7 +12,7 @@ body {
   min-height: 100vh;
 }
 .container {
-  max-width: $vp1200;
+  max-width: $vp1280;
   width: 100%;
   margin: 0 auto;
   padding: 0 40px;
@@ -18,7 +21,8 @@ body {
   opacity: 0;
   height: 0;
   font-size: 0;
-  margin-top: -1px;
+  position: absolute;
+    top: -1px;
 }
 
 .f-row {

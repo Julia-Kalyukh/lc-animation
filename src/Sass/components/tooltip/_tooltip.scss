@@ -1,8 +1,10 @@
-#popper-tooltip {
+.popper-tooltip {
   display: none;
-  padding: 6px 8px 11px;
+  padding: 6px 8px;
 
   max-width: 200px;
+  min-width: 90px;
+  text-align: center;
 
   font-weight: 400;
   font-size: 8px;
@@ -12,40 +14,40 @@
   background: $color-DarkSlateGrey;
 }
 
-#popper-tooltip[data-show] {
+.popper-tooltip[data-show] {
   display: block;
 }
 
-#popper-arrow,
-#popper-arrow::before {
+.popper-arrow,
+.popper-arrow::before {
   position: absolute;
   width: 8px;
   height: 8px;
   background: inherit;
 }
 
-#popper-arrow {
+.popper-arrow {
   visibility: hidden;
 }
 
-#popper-arrow::before {
+.popper-arrow::before {
   visibility: visible;
   content: '';
   transform: rotate(45deg);
 }
 
-#popper-tooltip[data-popper-placement^='top']>#popper-arrow {
+.popper-tooltip[data-popper-placement^='top']>.popper-arrow {
   bottom: -4px;
 }
 
-#popper-tooltip[data-popper-placement^='bottom']>#popper-arrow {
+.popper-tooltip[data-popper-placement^='bottom']>.popper-arrow {
   top: -4px;
 }
 
-#popper-tooltip[data-popper-placement^='left']>#popper-arrow {
+.popper-tooltip[data-popper-placement^='left']>.popper-arrow {
   right: -4px;
 }
 
-#popper-tooltip[data-popper-placement^='right']>#popper-arrow {
+.popper-tooltip[data-popper-placement^='right']>.popper-arrow {
   left: -4px;
 }

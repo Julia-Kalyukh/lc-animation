@@ -13,7 +13,7 @@
   justify-content: space-between;
   align-items: center;
 
-  padding: 16px 28px 19px 21px;
+  padding: 16px 28px 20px 21px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
   .profile-info__header_avatar {
@@ -55,7 +55,7 @@
 
 // SELFMADE RESPECT (SR)
 .profile-info__sr {
-  padding: 29px 26px 30px 21px;
+  padding: 30px 26px 30px 21px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
   .profile-info__sr_header {
@@ -81,7 +81,8 @@
   }
 
   .profile-info__variables {
-    padding: 10px 0 30px;
+    padding-top: 10px;
+    
     .profile-info__variables_item {
       width: 115px;
       height: 66px;
@@ -169,7 +170,7 @@
   font-size: 16px;
   line-height: 19px;
   color: $color-Grey;
-  margin-right: 9px;
+  margin-right: 4px;
 }
 
 .profile-info__disk_data {
@@ -189,7 +190,7 @@
     right: 20px;
     font-weight: 600;
     font-size: 12px;
-    line-height: 14px;
+    line-height: 15px;
     color: $color-RoyalBlue;
     cursor: pointer;
   }
@@ -200,17 +201,29 @@
     height: 15px;
     margin-left: 15px;
     border-radius: 63px;
-  }
-  progress::-webkit-progress-bar {
+    border: 1px solid transparent;
     background-color: $color-Lavender;
-    border-radius: 63px;
-  }
-  progress::-webkit-progress-value {
-    background-color: $color-RoyalBlue;
-    border-radius: 63px;
-  }
-  progress::-moz-progress-bar {
-    background-color: $color-RoyalBlue;
-    border-radius: 63px;
+    
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    &::-webkit-progress-bar {
+      background-color: $color-Lavender;
+      border-radius: 63px;
+    }
+    
+    &::-moz-progress-bar {
+      background-color: $color-Lavender;
+      border-radius: 63px;
+    }
+    &::-webkit-progress-value {
+      background-color: $color-RoyalBlue;
+      border-radius: 63px;
+    }
+    &::-moz-progress-bar {
+      background-color: $color-RoyalBlue;
+      border-radius: 63px;
+    }
   }
 }
