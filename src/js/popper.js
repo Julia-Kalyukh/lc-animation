@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
 
-  function onTooltip(btn, tooltipItem) {
+  function onTooltip(btn, tooltipItem, offsetValue) {
     const button = document.querySelector(btn);
     const tooltip = document.querySelector(tooltipItem);
   
@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
         {
           name: 'offset',
           options: {
-            offset: [0, 8],
+            offset: [0, offsetValue],
           },
         },
       ],
@@ -38,9 +38,11 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  onTooltip('#js-tooltip-btn-what', '#js-tooltip-what');
-  onTooltip('#js-tooltip-btn-top', '#js-tooltip-top');
-  onTooltip('#js-tooltip-btn-pro', '#js-tooltip-pro'); onTooltip('#js-tooltip-btn-fresh', '#js-tooltip-fresh'); onTooltip('#js-tooltip-btn-portfolio', '#js-tooltip-portfolio');
-  onTooltip('#js-tooltip-btn-profile', '#js-tooltip-profile');
+  onTooltip('#js-tooltip-btn-what', '#js-tooltip-what', 8);
+  onTooltip('#js-tooltip-btn-top', '#js-tooltip-top', -220);
+  onTooltip('#js-tooltip-btn-pro', '#js-tooltip-pro', -192);
+  onTooltip('#js-tooltip-btn-fresh', '#js-tooltip-fresh', -162);
+  onTooltip('#js-tooltip-btn-portfolio', '#js-tooltip-portfolio', -132);
+  onTooltip('#js-tooltip-btn-profile', '#js-tooltip-profile', -102);
 
 });

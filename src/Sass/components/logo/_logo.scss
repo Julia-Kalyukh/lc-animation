@@ -1,4 +1,8 @@
 .logo {
+  &:hover {
+      transform: scale(1.2);
+      transition: $animate;
+    }
   &--royalBlue {
     svg {
       fill: $color-RoyalBlue;

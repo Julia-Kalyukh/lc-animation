@@ -1,6 +1,7 @@
 // Навигация в ЛК
 .navigation-lk {
   width: 100%;
+  height: fit-content;
   max-width: 234px;
   padding: 16px 0 23px;
   margin-right: 30px;
@@ -32,7 +33,6 @@
   }
 
   .navigation-lk__item {
-    transition: $animate;
 
     .fill {
       fill: $color-DimGray;
@@ -44,14 +44,17 @@
 
     &:hover {
       a {
+        transition: $animate;
         color: $color-RoyalBlue;
       }
 
       .fill {
+        transition: $animate;
         fill: $color-RoyalBlue;
       }
 
       .stroke {
+        transition: $animate;
         stroke: $color-RoyalBlue;
       }
     }

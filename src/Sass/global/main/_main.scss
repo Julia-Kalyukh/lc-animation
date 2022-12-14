@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: $font-Gilroy;
 }
@@ -11,18 +12,31 @@ body {
   justify-content: space-between;
   min-height: 100vh;
 }
+
 .container {
   max-width: $vp1280;
   width: 100%;
   margin: 0 auto;
   padding: 0 40px;
 }
+
 .invisible {
   opacity: 0;
   height: 0;
   font-size: 0;
   position: absolute;
-    top: -1px;
+  top: -1px;
+}
+
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  transition: $animate;
 }
 
 .f-row {

@@ -21,15 +21,15 @@
       font-weight: 700;
       font-size: 14px;
       line-height: 17px;
-      color: #FFFFFF;
+      color: $color-White;
       text-align: center;
-      background: #5D5FEF;
+      background: $color-RoyalBlue;
       border-top: none;
 
       &:first-child {
         font-size: 20px;
         line-height: 106%;
-        color: #D6D6FF;
+        color: $color-Lavender;
         border-top-left-radius: 15px;
       }
 
@@ -48,7 +48,7 @@
     td:not(:last-child),
     th:not(:first-child),
     th:not(:last-child) {
-      border-left: 1px solid #FFFFFF;
+      border-left: 1px solid $color-White;
     }
 
 
@@ -57,20 +57,20 @@
       font-weight: 400;
       font-size: 14px;
       line-height: 16px;
-      color: #2F2F2F;
+      color: $color-DimGray;
       text-align: center;
     }
 
     tr {
       &:nth-child(even) {
         td {
-          background: #EDEDED;
+          background: $color-WhiteSmoke-2;
         }
       }
 
       &:nth-child(odd) {
         td {
-          background: #F5F5F5;
+          background: $color-GhostWhite;
         }
       }
 
@@ -88,7 +88,7 @@
     }
 
     .none {
-      color: #CDCDCD !important;
+      color: $color-LightGrey !important;
     }
 
     .link {

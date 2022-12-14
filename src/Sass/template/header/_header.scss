@@ -31,3 +31,36 @@
     border-radius: 50%;
   }
 }
+
+// Кнопка уведомлений в шапке
+.button__notification {
+  padding: 3px;
+
+  svg {
+    fill: $color-SlateGrey;
+  }
+}
+
+// Активный класс для уведомлений
+.button__notification.active {
+  position: relative;
+
+  svg {
+    animation: animate-bell 0.2s 5 ease-out;
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    right: 1.8px;
+
+    display: block;
+    width: 5px;
+    height: 5px;
+
+    background-color: $color-HotPink;
+    border-radius: 50%;
+  }
+}
