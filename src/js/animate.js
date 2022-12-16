@@ -3,16 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let progressSR = document.querySelector(circle);
   
     let strokeDashOffsetValue = 100 - ratio;
-    progressSR.style.strokeDashoffset = strokeDashOffsetValue;
-  
-  
-    progressSR.animate([
-      { strokeDashoffset: 100 },
-      { strokeDashoffset: strokeDashOffsetValue }], {
-      duration: 1500,
-      iterations: 1,
-      cubicBezier: '0.65, 0.05, 0.36, 1'
-    })
+    progressSR.style.cssText = `stroke-dashoffset: ${strokeDashOffsetValue}; --strokeDashOffsetValue: ${strokeDashOffsetValue}`;
   }
   
   addProgressSR('.js-sr-progress--top', 15);
@@ -23,9 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function onProgressMemory() {
     let p = document.querySelector('progress'); 
-// здесь val - это наше новое значение value
-    p.setAttribute('value', 40); 
-    // p.style.setProperty('width', 40 + '%');
+    let valWidth = 40;
+    p.setAttribute('value', valWidth); 
   }
 
   onProgressMemory();

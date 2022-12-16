@@ -8,6 +8,15 @@
   }
 }
 
+@keyframes progressSR {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: var(--strokeDashOffsetValue);
+  }
+}
+
 @keyframes animate-bell {
   0% {
     transform: rotate(0deg);
