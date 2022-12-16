@@ -12,17 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
   addProgressSR('.js-sr-progress--portfolio', 30);
   addProgressSR('.js-sr-progress--profile', 50);
 
-  function onProgressMemory() {
-    let p = document.querySelector('progress'); 
-    let valWidth = 40;
-    p.setAttribute('value', valWidth); 
-  }
-
-  onProgressMemory();
-
   function outNum(num, elem) {
 
-    const time = 2000;
+    let p = document.querySelector('progress'); 
+
+    const time = 1500;
     const step = 1;
 
     let e = document.querySelector(elem);
@@ -33,12 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if(n == num) {
               clearInterval(interval);
          }
-    e.innerHTML = n;
-    },
-t);
+      e.innerHTML = n;
+      p.setAttribute('value', n);
+    }, t)
   };
-  
-  outNum(40, '.count');
 
+  outNum(40, '.count');
 
 });

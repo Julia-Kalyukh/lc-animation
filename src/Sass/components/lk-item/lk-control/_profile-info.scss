@@ -223,13 +223,11 @@
       background-color: $color-RoyalBlue;
       border-radius: 63px;
     }
+
     &::-webkit-progress-value {
       background-color: $color-RoyalBlue;
       border-radius: 63px;
-    }
-
-    &::-webkit-progress-value {
-      transition: width 2s;
+      will-change: width;
     }
   }
 }
