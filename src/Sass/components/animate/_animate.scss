@@ -8,6 +8,30 @@
   }
 }
 
+@keyframes visibleTop {
+  0% {
+    opacity: 0;
+    transform: rotate(-90deg) translateY(2px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(-90deg) translateY(0);
+  }
+}
+
+@keyframes visibleBottom {
+  0% {
+    opacity: 0;
+    transform: rotate(-90deg) translateY(-2px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(-90deg) translateY(0);
+  }
+}
+
 @keyframes progressSR {
   0% {
     stroke-dashoffset: 100;

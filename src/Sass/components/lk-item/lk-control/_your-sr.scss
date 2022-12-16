@@ -36,7 +36,7 @@
     stroke-dashoffset: 100;
     stroke-linecap: round;
     stroke-width: 1.5;
-    animation: progressSR 2s cubic-bezier(0.4, 0, 0.2, 1) 1;
+    animation: progressSR 2s cubic-bezier(0.4, 0, 0.2, 1) 1 forwards;
     cursor: pointer;
     user-select: none;
     appearance: none;
@@ -47,12 +47,13 @@
   }
 
   .your-sr__text-top {
+    position: relative;
     transform: rotate(-90deg);
     font-weight: 600;
     font-size: 2px;
     fill: $color-HotPink;
     opacity: 0;
-    animation: visible 2s forwards;
+    animation: visibleTop 2s cubic-bezier(0.4, 0, 0.2, 1) 1 forwards;
   }
 
   .your-sr__text-pro {
@@ -61,7 +62,7 @@
     font-size: 5.6px;
     fill: $color-RoyalBlue;
     opacity: 0;
-    animation: visible 3s forwards;
+    animation: visible 1.5s cubic-bezier(0.4, 0, 0.2, 1) 1 forwards;
   }
 
   .your-sr__text-all {
@@ -70,7 +71,8 @@
     font-size: 2.6px;
     fill: #717171;
     opacity: 0;
-    animation: visible 4s forwards;
+    animation: visibleBottom 2s cubic-bezier(0.4, 0, 0.2, 1) 1 forwards;
+    will-change: animation;
   }
   
 }
@@ -78,8 +80,7 @@
 .your-sr__raiting {
   margin: 16.11px auto 0;
   width: fit-content;
-  animation: visible 4s forwards;
-
+  animation: visible 2s cubic-bezier(0.4, 0, 0.2, 1) 1 forwards;
 
   .scores {
     font-weight: 700;
