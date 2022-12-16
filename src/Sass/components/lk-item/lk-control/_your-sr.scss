@@ -48,7 +48,7 @@
 
   .your-sr__text-top {
     position: relative;
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) translateY(0);
     font-weight: 600;
     font-size: 2px;
     fill: $color-HotPink;
@@ -66,7 +66,7 @@
   }
 
   .your-sr__text-all {
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) translateY(0);
     font-weight: 500;
     font-size: 2.6px;
     fill: #717171;
