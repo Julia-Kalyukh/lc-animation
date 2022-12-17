@@ -46,7 +46,7 @@
   position: relative;
 
   svg {
-    animation: animate-bell 0.2s 5 ease-out;
+    animation: animate-bell 0.3s ease-out 5;
   }
 
   &::before {
